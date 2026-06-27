@@ -1,0 +1,104 @@
+{
+  "app": { "name": "Bazario", "tagline": "Votre marketplace multivendeur mondiale" },
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "vendors": "Vendeurs",
+    "cart": "Panier",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "logout": "Déconnexion",
+    "orders": "Mes commandes",
+    "search_placeholder": "Rechercher des produits..."
+  },
+  "home": {
+    "hero_title": "Découvrez des produits de vendeurs du monde entier",
+    "hero_subtitle": "Une marketplace, de nombreux vendeurs, dans votre langue et votre devise.",
+    "shop_now": "Acheter",
+    "browse_categories": "Parcourir les catégories",
+    "featured": "Produits en vedette",
+    "categories": "Acheter par catégorie",
+    "top_vendors": "Meilleurs vendeurs",
+    "view_all": "Voir tout"
+  },
+  "product": {
+    "add_to_cart": "Ajouter au panier",
+    "in_stock": "En stock",
+    "out_of_stock": "Rupture de stock",
+    "reviews": "{{count}} avis",
+    "sold_by": "Vendu par",
+    "description": "Description",
+    "related": "Vous aimerez aussi",
+    "write_review": "Écrire un avis",
+    "your_rating": "Votre note",
+    "submit_review": "Envoyer l'avis"
+  },
+  "catalog": {
+    "title": "Tous les produits",
+    "sort": "Trier par",
+    "sort_newest": "Plus récents",
+    "sort_price_asc": "Prix : croissant",
+    "sort_price_desc": "Prix : décroissant",
+    "sort_popular": "Les plus populaires",
+    "sort_rating": "Les mieux notés",
+    "no_results": "Aucun produit trouvé.",
+    "results": "{{count}} produits"
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre panier est vide.",
+    "continue_shopping": "Continuer mes achats",
+    "subtotal": "Sous-total",
+    "checkout": "Passer à la caisse",
+    "remove": "Retirer",
+    "quantity": "Qté"
+  },
+  "checkout": {
+    "title": "Paiement",
+    "shipping": "Adresse de livraison",
+    "name": "Nom complet",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "city": "Ville",
+    "country": "Pays",
+    "postal_code": "Code postal",
+    "payment": "Moyen de paiement",
+    "cod": "Paiement à la livraison",
+    "card": "Carte bancaire",
+    "coupon": "Code promo",
+    "apply": "Appliquer",
+    "place_order": "Commander",
+    "order_summary": "Récapitulatif",
+    "discount": "Remise",
+    "total": "Total",
+    "success": "Votre commande a été passée !"
+  },
+  "auth": {
+    "login_title": "Bon retour",
+    "register_title": "Créez votre compte",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "confirm_password": "Confirmer le mot de passe",
+    "name": "Nom complet",
+    "have_account": "Vous avez déjà un compte ?",
+    "no_account": "Vous n'avez pas de compte ?",
+    "sign_in": "Se connecter",
+    "sign_up": "S'inscrire"
+  },
+  "orders": {
+    "title": "Mes commandes",
+    "empty": "Vous n'avez pas encore de commandes.",
+    "order": "Commande",
+    "status": "Statut",
+    "total": "Total",
+    "date": "Date",
+    "view": "Voir"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "currency": "Devise",
+    "language": "Langue",
+    "all_rights": "Tous droits réservés."
+  }
+}

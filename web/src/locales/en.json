@@ -1,0 +1,104 @@
+{
+  "app": { "name": "Bazario", "tagline": "Your global multivendor marketplace" },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "vendors": "Vendors",
+    "cart": "Cart",
+    "login": "Sign in",
+    "register": "Create account",
+    "logout": "Sign out",
+    "orders": "My orders",
+    "search_placeholder": "Search products..."
+  },
+  "home": {
+    "hero_title": "Discover products from sellers around the world",
+    "hero_subtitle": "One marketplace, many vendors, your language and currency.",
+    "shop_now": "Shop now",
+    "browse_categories": "Browse categories",
+    "featured": "Featured products",
+    "categories": "Shop by category",
+    "top_vendors": "Top vendors",
+    "view_all": "View all"
+  },
+  "product": {
+    "add_to_cart": "Add to cart",
+    "in_stock": "In stock",
+    "out_of_stock": "Out of stock",
+    "reviews": "{{count}} reviews",
+    "sold_by": "Sold by",
+    "description": "Description",
+    "related": "You may also like",
+    "write_review": "Write a review",
+    "your_rating": "Your rating",
+    "submit_review": "Submit review"
+  },
+  "catalog": {
+    "title": "All products",
+    "sort": "Sort by",
+    "sort_newest": "Newest",
+    "sort_price_asc": "Price: low to high",
+    "sort_price_desc": "Price: high to low",
+    "sort_popular": "Most popular",
+    "sort_rating": "Top rated",
+    "no_results": "No products found.",
+    "results": "{{count}} products"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "empty": "Your cart is empty.",
+    "continue_shopping": "Continue shopping",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to checkout",
+    "remove": "Remove",
+    "quantity": "Qty"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping": "Shipping address",
+    "name": "Full name",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "postal_code": "Postal code",
+    "payment": "Payment method",
+    "cod": "Cash on delivery",
+    "card": "Credit card",
+    "coupon": "Coupon code",
+    "apply": "Apply",
+    "place_order": "Place order",
+    "order_summary": "Order summary",
+    "discount": "Discount",
+    "total": "Total",
+    "success": "Your order has been placed!"
+  },
+  "auth": {
+    "login_title": "Welcome back",
+    "register_title": "Create your account",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "name": "Full name",
+    "have_account": "Already have an account?",
+    "no_account": "Don't have an account?",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up"
+  },
+  "orders": {
+    "title": "My orders",
+    "empty": "You have no orders yet.",
+    "order": "Order",
+    "status": "Status",
+    "total": "Total",
+    "date": "Date",
+    "view": "View"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "currency": "Currency",
+    "language": "Language",
+    "all_rights": "All rights reserved."
+  }
+}

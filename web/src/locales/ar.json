@@ -1,0 +1,104 @@
+{
+  "app": { "name": "بازاريو", "tagline": "سوقك العالمي متعدد البائعين" },
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "vendors": "البائعون",
+    "cart": "السلة",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "orders": "طلباتي",
+    "search_placeholder": "ابحث عن المنتجات..."
+  },
+  "home": {
+    "hero_title": "اكتشف منتجات من بائعين حول العالم",
+    "hero_subtitle": "سوق واحد، بائعون كثر، بلغتك وعملتك.",
+    "shop_now": "تسوق الآن",
+    "browse_categories": "تصفح الفئات",
+    "featured": "منتجات مميزة",
+    "categories": "تسوق حسب الفئة",
+    "top_vendors": "أفضل البائعين",
+    "view_all": "عرض الكل"
+  },
+  "product": {
+    "add_to_cart": "أضف إلى السلة",
+    "in_stock": "متوفر",
+    "out_of_stock": "غير متوفر",
+    "reviews": "{{count}} تقييمات",
+    "sold_by": "يُباع بواسطة",
+    "description": "الوصف",
+    "related": "قد يعجبك أيضًا",
+    "write_review": "اكتب تقييمًا",
+    "your_rating": "تقييمك",
+    "submit_review": "إرسال التقييم"
+  },
+  "catalog": {
+    "title": "جميع المنتجات",
+    "sort": "ترتيب حسب",
+    "sort_newest": "الأحدث",
+    "sort_price_asc": "السعر: من الأقل إلى الأعلى",
+    "sort_price_desc": "السعر: من الأعلى إلى الأقل",
+    "sort_popular": "الأكثر رواجًا",
+    "sort_rating": "الأعلى تقييمًا",
+    "no_results": "لم يتم العثور على منتجات.",
+    "results": "{{count}} منتجات"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق فارغة.",
+    "continue_shopping": "متابعة التسوق",
+    "subtotal": "المجموع الفرعي",
+    "checkout": "إتمام الشراء",
+    "remove": "إزالة",
+    "quantity": "الكمية"
+  },
+  "checkout": {
+    "title": "إتمام الشراء",
+    "shipping": "عنوان الشحن",
+    "name": "الاسم الكامل",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "city": "المدينة",
+    "country": "الدولة",
+    "postal_code": "الرمز البريدي",
+    "payment": "طريقة الدفع",
+    "cod": "الدفع عند الاستلام",
+    "card": "بطاقة ائتمان",
+    "coupon": "رمز القسيمة",
+    "apply": "تطبيق",
+    "place_order": "تأكيد الطلب",
+    "order_summary": "ملخص الطلب",
+    "discount": "الخصم",
+    "total": "الإجمالي",
+    "success": "تم تقديم طلبك!"
+  },
+  "auth": {
+    "login_title": "مرحبًا بعودتك",
+    "register_title": "أنشئ حسابك",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "name": "الاسم الكامل",
+    "have_account": "لديك حساب بالفعل؟",
+    "no_account": "ليس لديك حساب؟",
+    "sign_in": "تسجيل الدخول",
+    "sign_up": "إنشاء حساب"
+  },
+  "orders": {
+    "title": "طلباتي",
+    "empty": "ليس لديك أي طلبات بعد.",
+    "order": "طلب",
+    "status": "الحالة",
+    "total": "الإجمالي",
+    "date": "التاريخ",
+    "view": "عرض"
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "currency": "العملة",
+    "language": "اللغة",
+    "all_rights": "جميع الحقوق محفوظة."
+  }
+}
