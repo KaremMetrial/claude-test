@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# Node (root-level safety net; each app also has its own .gitignore)
+node_modules/
+
+# Scratch
+/scratch/

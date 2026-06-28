@@ -1,0 +1,28 @@
+{
+  "app": { "name": "Bazario" },
+  "tabs": { "home": "Accueil", "shop": "Boutique", "cart": "Panier", "account": "Compte" },
+  "home": { "featured": "En vedette", "categories": "Catégories", "hero": "Achetez dans le monde, dans votre langue" },
+  "product": {
+    "add_to_cart": "Ajouter au panier",
+    "in_stock": "En stock",
+    "out_of_stock": "Rupture de stock",
+    "sold_by": "Vendu par",
+    "description": "Description",
+    "reviews": "Avis"
+  },
+  "cart": {
+    "title": "Votre panier",
+    "empty": "Votre panier est vide",
+    "subtotal": "Sous-total",
+    "checkout": "Commander",
+    "remove": "Retirer"
+  },
+  "account": {
+    "title": "Compte",
+    "language": "Langue",
+    "currency": "Devise",
+    "guest": "Navigation en tant qu'invité",
+    "restart_note": "Redémarrez l'application pour appliquer la mise en page de droite à gauche."
+  },
+  "common": { "loading": "Chargement...", "error": "Une erreur s'est produite", "price": "Prix" }
+}

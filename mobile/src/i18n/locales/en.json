@@ -1,0 +1,28 @@
+{
+  "app": { "name": "Bazario" },
+  "tabs": { "home": "Home", "shop": "Shop", "cart": "Cart", "account": "Account" },
+  "home": { "featured": "Featured", "categories": "Categories", "hero": "Shop the world, in your language" },
+  "product": {
+    "add_to_cart": "Add to cart",
+    "in_stock": "In stock",
+    "out_of_stock": "Out of stock",
+    "sold_by": "Sold by",
+    "description": "Description",
+    "reviews": "Reviews"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove"
+  },
+  "account": {
+    "title": "Account",
+    "language": "Language",
+    "currency": "Currency",
+    "guest": "Browsing as guest",
+    "restart_note": "Restart the app to fully apply right-to-left layout."
+  },
+  "common": { "loading": "Loading...", "error": "Something went wrong", "price": "Price" }
+}

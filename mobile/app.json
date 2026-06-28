@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Bazario",
+    "slug": "bazario",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "bazario",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#4f46e5"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bazario.app"
+    },
+    "android": {
+      "package": "com.bazario.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#4f46e5"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "apiUrl": "http://localhost:8000/api/v1"
+    }
+  }
+}
