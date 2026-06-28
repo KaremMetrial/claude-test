@@ -9,6 +9,7 @@
     "register": "إنشاء حساب",
     "logout": "تسجيل الخروج",
     "orders": "طلباتي",
+    "dashboard": "لوحة التحكم",
     "search_placeholder": "ابحث عن المنتجات..."
   },
   "home": {
@@ -100,5 +101,71 @@
     "currency": "العملة",
     "language": "اللغة",
     "all_rights": "جميع الحقوق محفوظة."
+  },
+  "dashboard": {
+    "status": "الحالة",
+    "nav": { "overview": "نظرة عامة", "products": "المنتجات", "orders": "الطلبات", "store": "المتجر" },
+    "stats": {
+      "revenue": "الإيرادات (المدفوعة)",
+      "orders": "إجمالي الطلبات",
+      "pending": "قيد الانتظار",
+      "units": "الوحدات المباعة",
+      "products": "المنتجات",
+      "active": "نشطة",
+      "out_of_stock": "نفدت الكمية",
+      "rating": "التقييم"
+    },
+    "products": {
+      "add": "إضافة منتج",
+      "empty": "لا توجد منتجات بعد. أضف أول منتج لك.",
+      "product": "المنتج",
+      "price": "السعر",
+      "stock": "المخزون",
+      "state": "الحالة",
+      "actions": "إجراءات",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "confirm_delete": "حذف هذا المنتج؟"
+    },
+    "form": {
+      "content": "المحتوى (لكل لغة)",
+      "name": "اسم المنتج",
+      "short_description": "وصف مختصر",
+      "description": "الوصف الكامل",
+      "translation_hint": "اترك اللغة فارغة للرجوع إلى اللغة الافتراضية.",
+      "pricing": "التسعير والمخزون",
+      "price": "السعر",
+      "compare_at": "سعر المقارنة (اختياري)",
+      "stock": "كمية المخزون",
+      "category": "الفئة",
+      "media": "الوسائط",
+      "thumbnail": "رابط الصورة المصغرة",
+      "gallery": "روابط صور المعرض (رابط في كل سطر)",
+      "active": "نشط (مرئي في المتجر)",
+      "featured": "مميز",
+      "save": "حفظ المنتج",
+      "cancel": "إلغاء"
+    },
+    "orders": {
+      "empty": "لا توجد طلبات بعد.",
+      "total": "الإجمالي",
+      "status": {
+        "pending": "قيد الانتظار",
+        "processing": "قيد المعالجة",
+        "shipped": "تم الشحن",
+        "completed": "مكتمل",
+        "cancelled": "ملغى"
+      }
+    },
+    "store": {
+      "name": "اسم المتجر",
+      "description": "الوصف",
+      "logo": "رابط الشعار",
+      "banner": "رابط البانر",
+      "base_currency": "العملة الأساسية",
+      "saved": "تم حفظ ملف المتجر."
+    }
   }
 }

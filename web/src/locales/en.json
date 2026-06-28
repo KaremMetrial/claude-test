@@ -9,6 +9,7 @@
     "register": "Create account",
     "logout": "Sign out",
     "orders": "My orders",
+    "dashboard": "Dashboard",
     "search_placeholder": "Search products..."
   },
   "home": {
@@ -100,5 +101,71 @@
     "currency": "Currency",
     "language": "Language",
     "all_rights": "All rights reserved."
+  },
+  "dashboard": {
+    "status": "Status",
+    "nav": { "overview": "Overview", "products": "Products", "orders": "Orders", "store": "Store" },
+    "stats": {
+      "revenue": "Revenue (paid)",
+      "orders": "Total orders",
+      "pending": "Pending",
+      "units": "Units sold",
+      "products": "Products",
+      "active": "Active",
+      "out_of_stock": "Out of stock",
+      "rating": "Rating"
+    },
+    "products": {
+      "add": "Add product",
+      "empty": "No products yet. Add your first one.",
+      "product": "Product",
+      "price": "Price",
+      "stock": "Stock",
+      "state": "State",
+      "actions": "Actions",
+      "active": "Active",
+      "inactive": "Inactive",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirm_delete": "Delete this product?"
+    },
+    "form": {
+      "content": "Content (per language)",
+      "name": "Product name",
+      "short_description": "Short description",
+      "description": "Full description",
+      "translation_hint": "Leave a language empty to fall back to the default language.",
+      "pricing": "Pricing & inventory",
+      "price": "Price",
+      "compare_at": "Compare-at price (optional)",
+      "stock": "Stock quantity",
+      "category": "Category",
+      "media": "Media",
+      "thumbnail": "Thumbnail URL",
+      "gallery": "Gallery image URLs (one per line)",
+      "active": "Active (visible in store)",
+      "featured": "Featured",
+      "save": "Save product",
+      "cancel": "Cancel"
+    },
+    "orders": {
+      "empty": "No orders yet.",
+      "total": "Total",
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "shipped": "Shipped",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      }
+    },
+    "store": {
+      "name": "Store name",
+      "description": "Description",
+      "logo": "Logo URL",
+      "banner": "Banner URL",
+      "base_currency": "Base currency",
+      "saved": "Store profile saved."
+    }
   }
 }

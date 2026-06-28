@@ -9,6 +9,7 @@
     "register": "Créer un compte",
     "logout": "Déconnexion",
     "orders": "Mes commandes",
+    "dashboard": "Tableau de bord",
     "search_placeholder": "Rechercher des produits..."
   },
   "home": {
@@ -100,5 +101,71 @@
     "currency": "Devise",
     "language": "Langue",
     "all_rights": "Tous droits réservés."
+  },
+  "dashboard": {
+    "status": "Statut",
+    "nav": { "overview": "Aperçu", "products": "Produits", "orders": "Commandes", "store": "Boutique" },
+    "stats": {
+      "revenue": "Revenus (payés)",
+      "orders": "Commandes totales",
+      "pending": "En attente",
+      "units": "Unités vendues",
+      "products": "Produits",
+      "active": "Actifs",
+      "out_of_stock": "En rupture",
+      "rating": "Note"
+    },
+    "products": {
+      "add": "Ajouter un produit",
+      "empty": "Aucun produit. Ajoutez votre premier produit.",
+      "product": "Produit",
+      "price": "Prix",
+      "stock": "Stock",
+      "state": "État",
+      "actions": "Actions",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirm_delete": "Supprimer ce produit ?"
+    },
+    "form": {
+      "content": "Contenu (par langue)",
+      "name": "Nom du produit",
+      "short_description": "Description courte",
+      "description": "Description complète",
+      "translation_hint": "Laissez une langue vide pour utiliser la langue par défaut.",
+      "pricing": "Prix et stock",
+      "price": "Prix",
+      "compare_at": "Prix barré (optionnel)",
+      "stock": "Quantité en stock",
+      "category": "Catégorie",
+      "media": "Médias",
+      "thumbnail": "URL de la miniature",
+      "gallery": "URLs des images (une par ligne)",
+      "active": "Actif (visible en boutique)",
+      "featured": "En vedette",
+      "save": "Enregistrer",
+      "cancel": "Annuler"
+    },
+    "orders": {
+      "empty": "Aucune commande.",
+      "total": "Total",
+      "status": {
+        "pending": "En attente",
+        "processing": "En traitement",
+        "shipped": "Expédiée",
+        "completed": "Terminée",
+        "cancelled": "Annulée"
+      }
+    },
+    "store": {
+      "name": "Nom de la boutique",
+      "description": "Description",
+      "logo": "URL du logo",
+      "banner": "URL de la bannière",
+      "base_currency": "Devise de base",
+      "saved": "Profil de la boutique enregistré."
+    }
   }
 }

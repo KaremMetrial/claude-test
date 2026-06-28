@@ -64,6 +64,11 @@ export default function Navbar() {
 
           {user ? (
             <div className="flex items-center gap-2">
+              {(user.role === 'vendor' || user.role === 'admin') && (
+                <Link to="/dashboard" className="hidden text-sm font-semibold text-brand-600 hover:text-brand-800 sm:block">
+                  {t('nav.dashboard')}
+                </Link>
+              )}
               <Link to="/orders" className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 sm:block">
                 {t('nav.orders')}
               </Link>

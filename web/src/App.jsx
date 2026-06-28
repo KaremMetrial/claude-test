@@ -13,6 +13,14 @@ import Register from './pages/Register'
 import Orders from './pages/Orders'
 import NotFound from './pages/NotFound'
 
+import RequireVendor from './dashboard/RequireVendor'
+import DashboardLayout from './dashboard/DashboardLayout'
+import Overview from './dashboard/pages/Overview'
+import DashProducts from './dashboard/pages/Products'
+import ProductForm from './dashboard/pages/ProductForm'
+import DashOrders from './dashboard/pages/Orders'
+import Store from './dashboard/pages/Store'
+
 import { useAuth } from './store/auth'
 import { useCart } from './store/cart'
 import { useLocalization } from './store/localization'
@@ -41,6 +49,23 @@ export default function App() {
         <Route path="register" element={<Register />} />
         <Route path="orders" element={<Orders />} />
         <Route path="*" element={<NotFound />} />
+      </Route>
+
+      {/* Vendor dashboard — own chrome, guarded by vendor/admin role */}
+      <Route
+        path="dashboard"
+        element={
+          <RequireVendor>
+            <DashboardLayout />
+          </RequireVendor>
+        }
+      >
+        <Route index element={<Overview />} />
+        <Route path="products" element={<DashProducts />} />
+        <Route path="products/new" element={<ProductForm />} />
+        <Route path="products/:id/edit" element={<ProductForm />} />
+        <Route path="orders" element={<DashOrders />} />
+        <Route path="store" element={<Store />} />
       </Route>
     </Routes>
   )
