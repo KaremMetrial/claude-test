@@ -8,6 +8,10 @@ use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ReviewController;
 use App\Http\Controllers\Api\VendorController;
+use App\Http\Controllers\Api\Vendor\DashboardController as VendorDashboard;
+use App\Http\Controllers\Api\Vendor\OrderController as VendorOrders;
+use App\Http\Controllers\Api\Vendor\ProductController as VendorProducts;
+use App\Http\Controllers\Api\Vendor\ProfileController as VendorProfile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,4 +59,24 @@ Route::prefix('v1')->group(function () {
 
         Route::post('products/{slug}/reviews', [ReviewController::class, 'store']);
     });
+
+    // --- Vendor dashboard (auth + vendor role) -----------------------------
+    Route::middleware(['auth:sanctum', 'role:vendor,admin'])
+        ->prefix('vendor')
+        ->group(function () {
+            Route::get('dashboard/stats', [VendorDashboard::class, 'stats']);
+
+            Route::get('products', [VendorProducts::class, 'index']);
+            Route::post('products', [VendorProducts::class, 'store']);
+            Route::get('products/{product}', [VendorProducts::class, 'show']);
+            Route::put('products/{product}', [VendorProducts::class, 'update']);
+            Route::delete('products/{product}', [VendorProducts::class, 'destroy']);
+
+            Route::get('orders', [VendorOrders::class, 'index']);
+            Route::get('orders/{order}', [VendorOrders::class, 'show']);
+            Route::patch('orders/{order}/status', [VendorOrders::class, 'updateStatus']);
+
+            Route::get('profile', [VendorProfile::class, 'show']);
+            Route::put('profile', [VendorProfile::class, 'update']);
+        });
 });
