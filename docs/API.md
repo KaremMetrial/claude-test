@@ -128,6 +128,63 @@ aggregate `rating` and `total_reviews` are recalculated automatically.
 
 ---
 
+## Vendor dashboard *(auth + `vendor`/`admin` role)*
+
+All routes are prefixed `/vendor` and scoped to the authenticated user's store.
+Accessing another store's product/order returns `403`.
+
+### `GET /vendor/dashboard/stats`
+Headline metrics: product counts, order counts, units sold, paid revenue, rating.
+
+### Products
+| Method & path | Description |
+|---------------|-------------|
+| `GET /vendor/products` | Own products (incl. inactive); `?q=`, `?status=` |
+| `POST /vendor/products` | Create — see body below |
+| `GET /vendor/products/{id}` | Single product with all translations + images |
+| `PUT /vendor/products/{id}` | Update |
+| `DELETE /vendor/products/{id}` | Delete |
+
+Create/update body:
+
+```json
+{
+  "category_id": 1,
+  "sku": "BZR-1001",
+  "price": 129.99,
+  "compare_at_price": 159.99,
+  "currency": "USD",
+  "stock": 25,
+  "is_active": true,
+  "is_featured": false,
+  "thumbnail": "https://...",
+  "translations": {
+    "en": { "name": "4K Action Camera", "short_description": "...", "description": "..." },
+    "ar": { "name": "كاميرا أكشن 4K" },
+    "fr": { "name": "Caméra d'action 4K" }
+  },
+  "images": ["https://...", "https://..."]
+}
+```
+
+The fallback locale's `name` is required; other locales are optional and fall
+back automatically. A unique `slug` is generated from the name.
+
+### Orders
+| Method & path | Description |
+|---------------|-------------|
+| `GET /vendor/orders` | The store's sub-orders with buyer + items; `?status=` |
+| `GET /vendor/orders/{id}` | A single sub-order |
+| `PATCH /vendor/orders/{id}/status` | `{ status }` — pending/processing/shipped/completed/cancelled |
+
+### Store profile
+| Method & path | Description |
+|---------------|-------------|
+| `GET /vendor/profile` | Current store details |
+| `PUT /vendor/profile` | Update store name, description, contact, base currency |
+
+---
+
 ## Error format
 
 ```json

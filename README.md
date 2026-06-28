@@ -8,7 +8,8 @@ Bazario is a complete e‑commerce ecosystem built with a clean, scalable archit
 
 ## ✨ Key Features
 
-- 🏪 **Multivendor** — independent vendor stores, per‑vendor products, orders split by vendor, vendor dashboards.
+- 🏪 **Multivendor** — independent vendor stores, per‑vendor products, orders split by vendor.
+- 📊 **Vendor dashboard** — vendors log in to manage products (in every language), track orders, update fulfilment status, and edit their storefront.
 - 🌍 **Multilingual** — content translations (products, categories) + UI i18n. English, Arabic (RTL), French out of the box.
 - 💱 **Multi‑currency** — per‑store base currency with live exchange rates and localized price formatting.
 - 🔐 **Token Auth** — Laravel Sanctum, role‑based access (customer / vendor / admin).
