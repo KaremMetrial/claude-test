@@ -1,5 +1,8 @@
 {
-  "app": { "name": "Bazario", "tagline": "Votre marketplace multivendeur mondiale" },
+  "app": {
+    "name": "Bazario",
+    "tagline": "Votre marketplace multivendeur mondiale"
+  },
   "nav": {
     "home": "Accueil",
     "shop": "Boutique",
@@ -10,6 +13,7 @@
     "logout": "Déconnexion",
     "orders": "Mes commandes",
     "dashboard": "Tableau de bord",
+    "admin": "Admin",
     "search_placeholder": "Rechercher des produits..."
   },
   "home": {
@@ -100,11 +104,17 @@
     "error": "Une erreur s'est produite. Veuillez réessayer.",
     "currency": "Devise",
     "language": "Langue",
-    "all_rights": "Tous droits réservés."
+    "all_rights": "Tous droits réservés.",
+    "save": "Enregistrer"
   },
   "dashboard": {
     "status": "Statut",
-    "nav": { "overview": "Aperçu", "products": "Produits", "orders": "Commandes", "store": "Boutique" },
+    "nav": {
+      "overview": "Aperçu",
+      "products": "Produits",
+      "orders": "Commandes",
+      "store": "Boutique"
+    },
     "stats": {
       "revenue": "Revenus (payés)",
       "orders": "Commandes totales",
@@ -166,6 +176,92 @@
       "banner": "URL de la bannière",
       "base_currency": "Devise de base",
       "saved": "Profil de la boutique enregistré."
+    }
+  },
+  "admin": {
+    "nav": {
+      "overview": "Aperçu",
+      "vendors": "Vendeurs",
+      "categories": "Catégories",
+      "currencies": "Devises",
+      "coupons": "Coupons",
+      "orders": "Commandes"
+    },
+    "stats": {
+      "gmv": "Volume d'affaires",
+      "revenue": "Revenus (payés)",
+      "orders": "Commandes",
+      "orders_today": "Commandes du jour",
+      "users": "Utilisateurs",
+      "vendors": "Vendeurs",
+      "pending_vendors": "Vendeurs en attente",
+      "products": "Produits",
+      "top_vendors": "Meilleurs vendeurs"
+    },
+    "vendors": {
+      "store": "Boutique",
+      "owner": "Propriétaire",
+      "products": "Produits",
+      "rating": "Note",
+      "status": "Statut",
+      "actions": "Actions",
+      "approve": "Approuver",
+      "suspend": "Suspendre",
+      "state": {
+        "approved": "Approuvé",
+        "pending": "En attente",
+        "suspended": "Suspendu"
+      }
+    },
+    "categories": {
+      "add": "Ajouter une catégorie",
+      "name": "Nom",
+      "slug": "Slug",
+      "products": "Produits",
+      "description": "Description",
+      "icon": "Icône (nom)",
+      "active": "Actif",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirm_delete": "Supprimer cette catégorie ?"
+    },
+    "currencies": {
+      "add": "Ajouter une devise",
+      "code": "Code",
+      "name": "Nom",
+      "symbol": "Symbole",
+      "rate": "Taux de change",
+      "decimals": "Décimales",
+      "before": "Symbole avant",
+      "after": "Symbole après",
+      "state": "État",
+      "default": "Par défaut",
+      "set_default": "Définir comme devise par défaut",
+      "edit": "Modifier",
+      "confirm_delete": "Supprimer cette devise ?"
+    },
+    "coupons": {
+      "add": "Ajouter un coupon",
+      "code": "Code",
+      "discount": "Remise",
+      "min": "Commande min.",
+      "used": "Utilisé",
+      "value": "Valeur",
+      "limit": "Limite d'utilisation",
+      "starts": "Début",
+      "expires": "Expiration",
+      "percent": "Pourcentage (%)",
+      "fixed": "Montant fixe",
+      "confirm_delete": "Supprimer ce coupon ?"
+    },
+    "orders": {
+      "number": "Commande #",
+      "customer": "Client",
+      "vendors": "Vendeurs",
+      "total": "Total",
+      "status": "Statut",
+      "date": "Date",
+      "empty": "Aucune commande."
     }
   }
 }

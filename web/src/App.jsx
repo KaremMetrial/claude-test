@@ -21,6 +21,15 @@ import ProductForm from './dashboard/pages/ProductForm'
 import DashOrders from './dashboard/pages/Orders'
 import Store from './dashboard/pages/Store'
 
+import RequireAdmin from './admin/RequireAdmin'
+import AdminLayout from './admin/AdminLayout'
+import AdminOverview from './admin/pages/Overview'
+import AdminVendors from './admin/pages/Vendors'
+import AdminCategories from './admin/pages/Categories'
+import AdminCurrencies from './admin/pages/Currencies'
+import AdminCoupons from './admin/pages/Coupons'
+import AdminOrders from './admin/pages/Orders'
+
 import { useAuth } from './store/auth'
 import { useCart } from './store/cart'
 import { useLocalization } from './store/localization'
@@ -66,6 +75,23 @@ export default function App() {
         <Route path="products/:id/edit" element={<ProductForm />} />
         <Route path="orders" element={<DashOrders />} />
         <Route path="store" element={<Store />} />
+      </Route>
+
+      {/* Admin panel — own chrome, guarded by admin role */}
+      <Route
+        path="admin"
+        element={
+          <RequireAdmin>
+            <AdminLayout />
+          </RequireAdmin>
+        }
+      >
+        <Route index element={<AdminOverview />} />
+        <Route path="vendors" element={<AdminVendors />} />
+        <Route path="categories" element={<AdminCategories />} />
+        <Route path="currencies" element={<AdminCurrencies />} />
+        <Route path="coupons" element={<AdminCoupons />} />
+        <Route path="orders" element={<AdminOrders />} />
       </Route>
     </Routes>
   )

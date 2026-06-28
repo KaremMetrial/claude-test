@@ -12,6 +12,12 @@ use App\Http\Controllers\Api\Vendor\DashboardController as VendorDashboard;
 use App\Http\Controllers\Api\Vendor\OrderController as VendorOrders;
 use App\Http\Controllers\Api\Vendor\ProductController as VendorProducts;
 use App\Http\Controllers\Api\Vendor\ProfileController as VendorProfile;
+use App\Http\Controllers\Api\Admin\DashboardController as AdminDashboard;
+use App\Http\Controllers\Api\Admin\VendorController as AdminVendors;
+use App\Http\Controllers\Api\Admin\CategoryController as AdminCategories;
+use App\Http\Controllers\Api\Admin\CurrencyController as AdminCurrencies;
+use App\Http\Controllers\Api\Admin\CouponController as AdminCoupons;
+use App\Http\Controllers\Api\Admin\OrderController as AdminOrders;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,5 +84,32 @@ Route::prefix('v1')->group(function () {
 
             Route::get('profile', [VendorProfile::class, 'show']);
             Route::put('profile', [VendorProfile::class, 'update']);
+        });
+
+    // --- Admin panel (auth + admin role) -----------------------------------
+    Route::middleware(['auth:sanctum', 'role:admin'])
+        ->prefix('admin')
+        ->group(function () {
+            Route::get('dashboard/stats', [AdminDashboard::class, 'stats']);
+
+            Route::get('vendors', [AdminVendors::class, 'index']);
+            Route::patch('vendors/{vendor}/status', [AdminVendors::class, 'updateStatus']);
+
+            Route::get('categories', [AdminCategories::class, 'index']);
+            Route::post('categories', [AdminCategories::class, 'store']);
+            Route::put('categories/{category}', [AdminCategories::class, 'update']);
+            Route::delete('categories/{category}', [AdminCategories::class, 'destroy']);
+
+            Route::get('currencies', [AdminCurrencies::class, 'index']);
+            Route::post('currencies', [AdminCurrencies::class, 'store']);
+            Route::put('currencies/{currency}', [AdminCurrencies::class, 'update']);
+            Route::delete('currencies/{currency}', [AdminCurrencies::class, 'destroy']);
+
+            Route::get('coupons', [AdminCoupons::class, 'index']);
+            Route::post('coupons', [AdminCoupons::class, 'store']);
+            Route::put('coupons/{coupon}', [AdminCoupons::class, 'update']);
+            Route::delete('coupons/{coupon}', [AdminCoupons::class, 'destroy']);
+
+            Route::get('orders', [AdminOrders::class, 'index']);
         });
 });

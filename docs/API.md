@@ -185,6 +185,57 @@ back automatically. A unique `slug` is generated from the name.
 
 ---
 
+## Admin panel *(auth + `admin` role)*
+
+All routes are prefixed `/admin`.
+
+### `GET /admin/dashboard/stats`
+Platform metrics: users, vendors (+ pending), products, orders, GMV, paid
+revenue, and top vendors.
+
+### Vendors
+| Method & path | Description |
+|---------------|-------------|
+| `GET /admin/vendors` | All vendors with owner + product counts; `?status=`, `?q=` |
+| `PATCH /admin/vendors/{id}/status` | `{ status }` — pending / approved / suspended |
+
+Suspending a vendor immediately hides their store and products from the public
+storefront.
+
+### Categories *(with translations)*
+| Method & path | Description |
+|---------------|-------------|
+| `GET /admin/categories` | All categories with translations + product counts |
+| `POST /admin/categories` | Create — `{ icon?, is_active, translations: { en:{name,description}, ... } }` |
+| `PUT /admin/categories/{id}` | Update |
+| `DELETE /admin/categories/{id}` | Delete |
+
+### Currencies
+| Method & path | Description |
+|---------------|-------------|
+| `GET /admin/currencies` | All currencies |
+| `POST /admin/currencies` | Create |
+| `PUT /admin/currencies/{id}` | Update rate / symbol / flags |
+| `DELETE /admin/currencies/{id}` | Delete (the default currency cannot be deleted) |
+
+Setting `is_default: true` atomically unsets the previous default. Changing an
+`exchange_rate` instantly reprices the whole catalog for that currency.
+
+### Coupons
+| Method & path | Description |
+|---------------|-------------|
+| `GET /admin/coupons` | All coupons |
+| `POST /admin/coupons` | Create — `{ code, type: percent\|fixed, value, min_order_total?, usage_limit?, starts_at?, expires_at?, is_active }` |
+| `PUT /admin/coupons/{id}` | Update |
+| `DELETE /admin/coupons/{id}` | Delete |
+
+### Orders
+| Method & path | Description |
+|---------------|-------------|
+| `GET /admin/orders` | All customer orders with buyer + vendor/item counts; `?status=`, `?q=` |
+
+---
+
 ## Error format
 
 ```json

@@ -1,5 +1,8 @@
 {
-  "app": { "name": "Bazario", "tagline": "Your global multivendor marketplace" },
+  "app": {
+    "name": "Bazario",
+    "tagline": "Your global multivendor marketplace"
+  },
   "nav": {
     "home": "Home",
     "shop": "Shop",
@@ -10,6 +13,7 @@
     "logout": "Sign out",
     "orders": "My orders",
     "dashboard": "Dashboard",
+    "admin": "Admin",
     "search_placeholder": "Search products..."
   },
   "home": {
@@ -100,11 +104,17 @@
     "error": "Something went wrong. Please try again.",
     "currency": "Currency",
     "language": "Language",
-    "all_rights": "All rights reserved."
+    "all_rights": "All rights reserved.",
+    "save": "Save"
   },
   "dashboard": {
     "status": "Status",
-    "nav": { "overview": "Overview", "products": "Products", "orders": "Orders", "store": "Store" },
+    "nav": {
+      "overview": "Overview",
+      "products": "Products",
+      "orders": "Orders",
+      "store": "Store"
+    },
     "stats": {
       "revenue": "Revenue (paid)",
       "orders": "Total orders",
@@ -166,6 +176,92 @@
       "banner": "Banner URL",
       "base_currency": "Base currency",
       "saved": "Store profile saved."
+    }
+  },
+  "admin": {
+    "nav": {
+      "overview": "Overview",
+      "vendors": "Vendors",
+      "categories": "Categories",
+      "currencies": "Currencies",
+      "coupons": "Coupons",
+      "orders": "Orders"
+    },
+    "stats": {
+      "gmv": "GMV",
+      "revenue": "Revenue (paid)",
+      "orders": "Orders",
+      "orders_today": "Orders today",
+      "users": "Users",
+      "vendors": "Vendors",
+      "pending_vendors": "Pending vendors",
+      "products": "Products",
+      "top_vendors": "Top vendors"
+    },
+    "vendors": {
+      "store": "Store",
+      "owner": "Owner",
+      "products": "Products",
+      "rating": "Rating",
+      "status": "Status",
+      "actions": "Actions",
+      "approve": "Approve",
+      "suspend": "Suspend",
+      "state": {
+        "approved": "Approved",
+        "pending": "Pending",
+        "suspended": "Suspended"
+      }
+    },
+    "categories": {
+      "add": "Add category",
+      "name": "Name",
+      "slug": "Slug",
+      "products": "Products",
+      "description": "Description",
+      "icon": "Icon (name)",
+      "active": "Active",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirm_delete": "Delete this category?"
+    },
+    "currencies": {
+      "add": "Add currency",
+      "code": "Code",
+      "name": "Name",
+      "symbol": "Symbol",
+      "rate": "Exchange rate",
+      "decimals": "Decimals",
+      "before": "Symbol before",
+      "after": "Symbol after",
+      "state": "State",
+      "default": "Default",
+      "set_default": "Set as default currency",
+      "edit": "Edit",
+      "confirm_delete": "Delete this currency?"
+    },
+    "coupons": {
+      "add": "Add coupon",
+      "code": "Code",
+      "discount": "Discount",
+      "min": "Min order",
+      "used": "Used",
+      "value": "Value",
+      "limit": "Usage limit",
+      "starts": "Starts at",
+      "expires": "Expires at",
+      "percent": "Percentage (%)",
+      "fixed": "Fixed amount",
+      "confirm_delete": "Delete this coupon?"
+    },
+    "orders": {
+      "number": "Order #",
+      "customer": "Customer",
+      "vendors": "Vendors",
+      "total": "Total",
+      "status": "Status",
+      "date": "Date",
+      "empty": "No orders yet."
     }
   }
 }
