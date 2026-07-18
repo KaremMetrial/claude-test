@@ -18,9 +18,11 @@ export default function Checkout() {
   const [coupon, setCoupon] = useState('')
   const [placing, setPlacing] = useState(false)
   const [error, setError] = useState(null)
+  const [payConfig, setPayConfig] = useState({ methods: ['cod', 'card'], gateway: 'offline' })
 
   useEffect(() => {
     fetch()
+    api.get('/payments/config').then(({ data }) => setPayConfig(data)).catch(() => {})
   }, [fetch])
 
   // Guard: checkout requires an account.
@@ -40,8 +42,19 @@ export default function Checkout() {
         coupon_code: coupon || undefined,
         shipping_address: form,
       })
+      const number = data.data.number
       clear()
-      navigate(`/orders?placed=${data.data.number}`)
+
+      // Card orders go through the active gateway; the API returns where to send
+      // the browser next (Stripe hosted Checkout, or the demo gateway's success
+      // page). Cash-on-delivery skips online payment.
+      if (payment === 'card') {
+        const { data: pay } = await api.post(`/payments/${number}/pay`)
+        window.location.href = pay.data.redirect_url
+        return
+      }
+
+      navigate(`/orders?placed=${number}`)
     } catch (err) {
       setError(err.response?.data?.message || t('common.error'))
     } finally {
@@ -78,16 +91,16 @@ export default function Checkout() {
           <section className="card p-6">
             <h2 className="mb-4 text-lg font-bold text-slate-900">{t('checkout.payment')}</h2>
             <div className="space-y-2">
-              {[
-                { id: 'cod', label: t('checkout.cod') },
-                { id: 'card', label: t('checkout.card') },
-              ].map((p) => (
-                <label key={p.id} className="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-3">
-                  <input type="radio" name="payment" checked={payment === p.id} onChange={() => setPayment(p.id)} />
-                  <span className="text-sm font-medium text-slate-700">{p.label}</span>
+              {payConfig.methods.map((id) => (
+                <label key={id} className="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-3">
+                  <input type="radio" name="payment" checked={payment === id} onChange={() => setPayment(id)} />
+                  <span className="text-sm font-medium text-slate-700">{t(`checkout.${id}`)}</span>
                 </label>
               ))}
             </div>
+            {payment === 'card' && payConfig.gateway === 'offline' && (
+              <p className="mt-3 rounded-md bg-amber-50 p-2 text-xs text-amber-700">{t('checkout.demo_gateway')}</p>
+            )}
           </section>
         </div>
 

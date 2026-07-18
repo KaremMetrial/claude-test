@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\LocalizationController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ReviewController;
 use App\Http\Controllers\Api\VendorController;
@@ -50,6 +51,11 @@ Route::prefix('v1')->group(function () {
     Route::patch('cart/items/{item}', [CartController::class, 'updateItem']);
     Route::delete('cart/items/{item}', [CartController::class, 'removeItem']);
 
+    // --- Payments ----------------------------------------------------------
+    Route::get('payments/config', [PaymentController::class, 'config']);
+    // Gateway webhook (Stripe). Authenticity is verified via the signing secret.
+    Route::post('payments/webhook', [PaymentController::class, 'webhook']);
+
     // --- Auth --------------------------------------------------------------
     Route::post('auth/register', [AuthController::class, 'register']);
     Route::post('auth/login', [AuthController::class, 'login']);
@@ -62,6 +68,7 @@ Route::prefix('v1')->group(function () {
         Route::get('orders', [OrderController::class, 'index']);
         Route::get('orders/{number}', [OrderController::class, 'show']);
         Route::post('checkout', [OrderController::class, 'store']);
+        Route::post('payments/{number}/pay', [PaymentController::class, 'pay']);
 
         Route::post('products/{slug}/reviews', [ReviewController::class, 'store']);
     });

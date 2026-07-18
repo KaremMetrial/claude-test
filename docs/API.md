@@ -91,6 +91,44 @@ Responses include `cart_token` for guests to persist.
 
 ---
 
+## Payments
+
+The platform supports a pluggable online gateway (configured via
+`PAYMENT_GATEWAY`): **`stripe`** (production, hosted Checkout) or **`offline`**
+(a demo gateway that settles instantly — great for local dev and buyers without
+Stripe keys). Cash-on-delivery (`cod`) needs no online payment.
+
+### `GET /payments/config`
+Enabled checkout methods, the active gateway, and the Stripe publishable key
+(when Stripe is configured).
+
+```json
+{ "methods": ["cod", "card"], "gateway": "offline", "stripe_key": null }
+```
+
+### `POST /payments/{orderNumber}/pay` *(auth)*
+Starts an online payment for one of the caller's orders and returns where to
+send the browser next:
+
+```json
+{ "data": { "gateway": "stripe", "status": "pending", "redirect_url": "https://checkout.stripe.com/...", "reference": "cs_..." } }
+```
+
+- **Stripe** → `redirect_url` is the hosted Checkout page; the order is settled
+  later by the webhook.
+- **Offline** → the order is settled immediately and `redirect_url` points back
+  to the paid order.
+
+Paying an already-paid order returns `422`.
+
+### `POST /payments/webhook`
+Stripe webhook endpoint (no auth — authenticity is verified with the signing
+secret). On `checkout.session.completed` the matching order and its per-vendor
+sub-orders are marked **paid**. Configure it in Stripe to point here and set
+`STRIPE_WEBHOOK_SECRET`.
+
+---
+
 ## Orders & Checkout *(auth)*
 
 ### `POST /checkout`

@@ -70,6 +70,7 @@
     "payment": "Moyen de paiement",
     "cod": "Paiement à la livraison",
     "card": "Carte bancaire",
+    "demo_gateway": "Mode démo : une passerelle de test est utilisée — aucune carte réelle n'est débitée.",
     "coupon": "Code promo",
     "apply": "Appliquer",
     "place_order": "Commander",
